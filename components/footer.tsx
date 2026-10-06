@@ -2,13 +2,28 @@ import Link from "next/link";
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 export function Footer() {
+  // const socials = [
+  //   { name: "Facebook", handle: "@rjgenerators", icon: <Facebook className="w-4 h-4" /> },
+  //   { name: "Instagram", handle: "@rjgenerators", icon: <Instagram className="w-4 h-4" /> },
+  //   { name: "LinkedIn", handle: "RJ Generators", icon: <Linkedin className="w-4 h-4" /> },
+  //   { name: "Twitter / X", handle: "@rjgenerators", icon: <Twitter className="w-4 h-4" /> },
+  //   { name: "YouTube", handle: "RJ Generators", icon: <Youtube className="w-4 h-4" /> },
+  // ];
   const socials = [
-    { name: "Facebook", handle: "@rjgenerators", icon: <Facebook className="w-4 h-4" /> },
-    { name: "Instagram", handle: "@rjgenerators", icon: <Instagram className="w-4 h-4" /> },
-    { name: "LinkedIn", handle: "RJ Generators", icon: <Linkedin className="w-4 h-4" /> },
-    { name: "Twitter / X", handle: "@rjgenerators", icon: <Twitter className="w-4 h-4" /> },
-    { name: "YouTube", handle: "RJ Generators", icon: <Youtube className="w-4 h-4" /> },
-  ];
+    {
+      name: "Facebook",
+      handle: "@rjgenerators",
+      url: "https://www.facebook.com/share/1DsPeWtiCM/?mibextid=wwXIfr",
+      icon: <Facebook className="w-4 h-4" />
+    },
+    {
+      name: "Instagram",
+      handle: "@rjgenerators",
+      url: "*Instagram Page:* https://www.instagram.com/rjgenerator1?stkn=MTk0aXVjOXY4dmFoaw%3D%3D&utm_source=qr",
+      icon: <Instagram className="w-4 h-4" />
+    },
+
+  ]
 
   return (
     <footer id="contact" className="bg-zinc-950 text-zinc-400 py-20 border-t border-zinc-900">
@@ -58,7 +73,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-blue-500 shrink-0" />
-                <span>zehakmujeeb@icloud.com</span>
+                <span>rjgenerators262@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -69,7 +84,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm">
               <li>
                 <div className="font-bold text-zinc-300 mb-1">Buying & Sales Desk</div>
-                <div>Mon - Fri: 08:00 - 18:00</div>
+                <div>Mon - Sat: 12:00 - 10:00</div>
               </li>
               <li>
                 <div className="font-bold text-zinc-300 mb-1">Collections & Support</div>
@@ -83,13 +98,7 @@ export function Footer() {
           <div className="flex flex-col gap-1">
             <p>&copy; {new Date().getFullYear()} RJ Generators. All deals secured.</p>
             <p className="text-black">
-              <a
-                href="https://k-h-tech-sol-production.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Powered By &quot;K&amp;H TECH SOL&quot;
-              </a>
+             
             </p>
           </div>
           <ul className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2">

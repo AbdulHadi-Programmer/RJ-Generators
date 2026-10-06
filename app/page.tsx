@@ -262,7 +262,7 @@ export default function Home() {
                     <Image src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Sarah Chen" fill sizes="(max-width: 768px) 100vw, 48px" className="object-cover" referrerPolicy="no-referrer" />
                   </div>
                   <div>
-                    <div className="font-bold">Sarah Chen</div>
+                    <div className="font-bold">Hafsa Qasim</div>
                     <div className="text-sm text-zinc-500 uppercase tracking-widest font-mono">Plant Owner</div>
                   </div>
                 </div>
@@ -289,7 +289,7 @@ export default function Home() {
                     <Image src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" alt="Marcus Johnson" fill sizes="(max-width: 768px) 100vw, 48px" className="object-cover" referrerPolicy="no-referrer" />
                   </div>
                   <div>
-                    <div className="font-bold">Marcus Johnson</div>
+                    <div className="font-bold">Hamza Khan</div>
                     <div className="text-sm text-zinc-500 uppercase tracking-widest font-mono">Facility Director</div>
                   </div>
                 </div>
