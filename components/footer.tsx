@@ -9,21 +9,31 @@ export function Footer() {
   //   { name: "Twitter / X", handle: "@rjgenerators", icon: <Twitter className="w-4 h-4" /> },
   //   { name: "YouTube", handle: "RJ Generators", icon: <Youtube className="w-4 h-4" /> },
   // ];
-  const socials = [
-    {
-      name: "Facebook",
-      handle: "@rjgenerators",
-      url: "https://www.facebook.com/share/1DsPeWtiCM/?mibextid=wwXIfr",
-      icon: <Facebook className="w-4 h-4" />
-    },
-    {
-      name: "Instagram",
-      handle: "@rjgenerators",
-      url: "*Instagram Page:* https://www.instagram.com/rjgenerator1?stkn=MTk0aXVjOXY4dmFoaw%3D%3D&utm_source=qr",
-      icon: <Instagram className="w-4 h-4" />
-    },
-
-  ]
+const socials = [
+  {
+    name: "Facebook",
+    handle: "@rjgenerators",
+    url: "https://www.facebook.com/share/1DsPeWtiCM/?mibextid=wwXIfr",
+    icon: <Facebook className="w-4 h-4" />
+  },
+  {
+    name: "Instagram",
+    handle: "@rjgenerators",
+    url: "https://www.instagram.com/rjgenerator1/",
+    icon: <Instagram className="w-4 h-4" />
+  },
+];
+<a
+  href={social.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={social.name}
+  title={`${social.name} — ${social.handle}`}
+  className="inline-flex items-center gap-2 text-zinc-400 hover:text-blue-400 transition-colors"
+>
+  {social.icon}
+  <span>{social.handle}</span>
+</a>
 
   return (
     <footer id="contact" className="bg-zinc-950 text-zinc-400 py-20 border-t border-zinc-900">
