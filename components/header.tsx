@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+// import { Phone } from "lucide-react";
 
 interface HeaderProps {
   theme?: "dark" | "light";
