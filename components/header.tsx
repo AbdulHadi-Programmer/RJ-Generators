@@ -202,6 +202,7 @@ export function Header({ theme = "light" }: HeaderProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
+            // className="fixed inset-0 z-40 bg-white md:hidden pt-24 px-6 flex flex-col overflow-y-auto"
             className="fixed inset-0 z-40 bg-white md:hidden pt-24 px-6 flex flex-col overflow-y-auto"
           >
             <nav className="flex flex-col gap-6 mt-8">
