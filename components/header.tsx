@@ -1,9 +1,8 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowRight, ChevronDown, Phone } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -143,7 +142,7 @@ export function Header({ theme = "light" }: HeaderProps) {
               )
             )}
 
-            {/* Existing Buy or Sell WhatsApp button */}
+            {/* Buy or Sell WhatsApp button */}
             <a
               href={whatsappUrl}
               target="_blank"
@@ -155,20 +154,6 @@ export function Header({ theme = "light" }: HeaderProps) {
               }`}
             >
               Buy or Sell <ArrowRight className="w-4 h-4" />
-            </a>
-
-            {/* New Call Now button */}
-            <a
-              href="tel:+923228195965"
-              aria-label="Call RJ Generators at +92 322 8195965"
-              className={`px-5 py-2.5 text-sm font-medium rounded-full transition-all flex items-center gap-2 ${
-                isDarkBg
-                  ? "bg-white text-zinc-900 hover:bg-zinc-100"
-                  : "bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-xl hover:shadow-blue-900/10"
-              }`}
-            >
-              <Phone className="w-4 h-4" />
-              Call Now
             </a>
           </nav>
 
