@@ -109,8 +109,8 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-bold mb-1">Email</h3>
-                        <p className="text-zinc-600 text-sm">zehakmujeeb@icloud.com</p>
-                        <p className="text-zinc-600 text-sm">zehakmujeeb@icloud.com</p>
+                        {/* <p className="text-zinc-600 text-sm">zehakmujeeb@icloud.com</p> */}
+                        <p className="text-zinc-600 text-sm">rjgenerators262@gmail.com</p>
                       </div>
                     </li>
                   </ul>

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -5,7 +6,6 @@ import Link from "next/link";
 import { Menu, X, ArrowRight, ChevronDown, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
-// import { Phone } from "lucide-react";
 
 interface HeaderProps {
   theme?: "dark" | "light";
@@ -27,6 +27,7 @@ export function Header({ theme = "light" }: HeaderProps) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -48,7 +49,9 @@ export function Header({ theme = "light" }: HeaderProps) {
     { name: "Contact", href: "/contact" },
   ];
 
-  const whatsappUrl = buildWhatsAppUrl("Connect with our representative on whatsapp to get a quote for generator.");
+  const whatsappUrl = buildWhatsAppUrl(
+    "Connect with our representative on whatsapp to get a quote for generator."
+  );
 
   return (
     <header
@@ -56,18 +59,22 @@ export function Header({ theme = "light" }: HeaderProps) {
         mobileMenuOpen
           ? "py-3 bg-white"
           : isScrolled
-          ? "py-3 bg-white/90 backdrop-blur-xl border-b border-zinc-200/50 shadow-sm" 
-          : "py-6 bg-transparent"
+            ? "py-3 bg-white/90 backdrop-blur-xl border-b border-zinc-200/50 shadow-sm"
+            : "py-6 bg-transparent"
       }`}
     >
       <div className="container mx-auto px-2 md:px-6">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 md:gap-3 group z-50" onClick={() => setMobileMenuOpen(false)}>
+          <Link
+            href="/"
+            className="flex items-center gap-2 md:gap-3 group z-50"
+            onClick={() => setMobileMenuOpen(false)}
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/RJ-Logo.png"
               alt="RJ Generator"
-              className="h-40 lg:h-32 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-40 md:h-24 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </Link>
 
@@ -83,14 +90,21 @@ export function Header({ theme = "light" }: HeaderProps) {
                 >
                   <button
                     className={`flex items-center gap-1.5 text-sm font-medium transition-all hover:-translate-y-0.5 duration-200 ${
-                      isDarkBg ? "text-white/80 hover:text-white" : "text-zinc-600 hover:text-zinc-900"
+                      isDarkBg
+                        ? "text-white/80 hover:text-white"
+                        : "text-zinc-600 hover:text-zinc-900"
                     }`}
                     onClick={() => setServicesOpen(!servicesOpen)}
                     aria-expanded={servicesOpen}
                   >
                     {link.name}
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-300 ${
+                        servicesOpen ? "rotate-180" : ""
+                      }`}
+                    />
                   </button>
+
                   <AnimatePresence>
                     {servicesOpen && (
                       <motion.div
@@ -119,13 +133,17 @@ export function Header({ theme = "light" }: HeaderProps) {
                   key={link.name}
                   href={link.href!}
                   className={`text-sm font-medium transition-all hover:-translate-y-0.5 duration-200 ${
-                    isDarkBg ? "text-white/80 hover:text-white" : "text-zinc-600 hover:text-zinc-900"
+                    isDarkBg
+                      ? "text-white/80 hover:text-white"
+                      : "text-zinc-600 hover:text-zinc-900"
                   }`}
                 >
                   {link.name}
                 </Link>
               )
             )}
+
+            {/* Existing Buy or Sell WhatsApp button */}
             <a
               href={whatsappUrl}
               target="_blank"
@@ -138,20 +156,54 @@ export function Header({ theme = "light" }: HeaderProps) {
             >
               Buy or Sell <ArrowRight className="w-4 h-4" />
             </a>
+
+            {/* New Call Now button */}
+            <a
+              href="tel:+923228195965"
+              aria-label="Call RJ Generators at +92 322 8195965"
+              className={`px-5 py-2.5 text-sm font-medium rounded-full transition-all flex items-center gap-2 ${
+                isDarkBg
+                  ? "bg-white text-zinc-900 hover:bg-zinc-100"
+                  : "bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-xl hover:shadow-blue-900/10"
+              }`}
+            >
+              <Phone className="w-4 h-4" />
+              Call Now
+            </a>
           </nav>
 
           {/* Mobile Toggle */}
           <button
             className={`md:hidden relative w-10 h-10 flex items-center justify-center -mr-2 z-50 rounded-full transition-colors ${
-              isDarkBg ? "text-white hover:bg-white/10" : "text-zinc-900 hover:bg-zinc-100"
+              isDarkBg
+                ? "text-white hover:bg-white/10"
+                : "text-zinc-900 hover:bg-zinc-100"
             }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
             <div className="flex flex-col items-end justify-center gap-[5px] w-5 h-5">
-              <span className={`block h-[2px] rounded-full transition-all duration-300 bg-current ${mobileMenuOpen ? "w-5 rotate-45 translate-y-[7px]" : "w-5"}`} />
-              <span className={`block h-[2px] rounded-full transition-all duration-300 bg-current ${mobileMenuOpen ? "w-5 opacity-0 translate-x-2" : "w-4"}`} />
-              <span className={`block h-[2px] rounded-full transition-all duration-300 bg-current ${mobileMenuOpen ? "w-5 -rotate-45 -translate-y-[7px]" : "w-3"}`} />
+              <span
+                className={`block h-[2px] rounded-full transition-all duration-300 bg-current ${
+                  mobileMenuOpen
+                    ? "w-5 rotate-45 translate-y-[7px]"
+                    : "w-5"
+                }`}
+              />
+              <span
+                className={`block h-[2px] rounded-full transition-all duration-300 bg-current ${
+                  mobileMenuOpen
+                    ? "w-5 opacity-0 translate-x-2"
+                    : "w-4"
+                }`}
+              />
+              <span
+                className={`block h-[2px] rounded-full transition-all duration-300 bg-current ${
+                  mobileMenuOpen
+                    ? "w-5 -rotate-45 -translate-y-[7px]"
+                    : "w-3"
+                }`}
+              />
             </div>
           </button>
         </div>
@@ -174,18 +226,29 @@ export function Header({ theme = "light" }: HeaderProps) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
-                  transition={{ delay: 0.1 + i * 0.1, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{
+                    delay: 0.1 + i * 0.1,
+                    duration: 0.4,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
                 >
                   {link.children ? (
                     <>
                       <button
                         className="text-4xl font-bold tracking-tight text-zinc-900 flex items-center justify-between w-full group"
-                        onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                        onClick={() =>
+                          setMobileServicesOpen(!mobileServicesOpen)
+                        }
                         aria-expanded={mobileServicesOpen}
                       >
                         {link.name}
-                        <ChevronDown className={`w-8 h-8 text-zinc-200 group-hover:text-blue-600 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+                        <ChevronDown
+                          className={`w-8 h-8 text-zinc-200 group-hover:text-blue-600 transition-transform duration-300 ${
+                            mobileServicesOpen ? "rotate-180" : ""
+                          }`}
+                        />
                       </button>
+
                       <AnimatePresence>
                         {mobileServicesOpen && (
                           <motion.div
@@ -224,7 +287,8 @@ export function Header({ theme = "light" }: HeaderProps) {
                 </motion.div>
               ))}
             </nav>
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -232,8 +296,12 @@ export function Header({ theme = "light" }: HeaderProps) {
               className="mt-auto mb-12 pt-10"
             >
               <div className="w-full h-px bg-zinc-100 mb-8" />
+
               <div className="flex flex-col gap-4">
-                <p className="text-sm font-mono text-zinc-500 uppercase tracking-widest">Get in touch</p>
+                <p className="text-sm font-mono text-zinc-500 uppercase tracking-widest">
+                  Get in touch
+                </p>
+
                 <a
                   href={whatsappUrl}
                   target="_blank"
@@ -251,4 +319,3 @@ export function Header({ theme = "light" }: HeaderProps) {
     </header>
   );
 }
-
