@@ -33,6 +33,36 @@ export default function Home() {
           
           <div className="container mx-auto px-6 relative z-10 pt-32 pb-12 lg:pt-40 lg:pb-24">
             <div className="max-w-3xl">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
+              >
+                Generators on rent. Fast and reliable.
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-lg text-zinc-300 mb-10 leading-relaxed max-w-lg"
+              >
+                Diesel generators on rent for projects, events and backup power. Available 24/7.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <Link
+                  href="/rent"
+                  className="inline-flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-sm font-bold uppercase tracking-wider transition-colors"
+                >
+                  Rent a Generator <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            </div>
+            {/* <div className="max-w-3xl">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -41,7 +71,7 @@ export default function Home() {
               >
                 <span className="w-12 h-0.5 bg-blue-500"></span>
                 <span className="font-mono text-sm tracking-widest uppercase text-blue-400 font-bold">
-                  Generator Sale & Purchase
+                  Generator Rental & Hire
                 </span>
               </motion.div>
               <motion.h1 
@@ -50,7 +80,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-5xl lg:text-7xl font-bold tracking-tight text-white mb-8 leading-[1.1]"
               >
-                Rent, Buy, sell and trade generators. Fast and fair.
+                Generators on rent. Fast and reliable.
               </motion.h1>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -58,8 +88,8 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-lg text-zinc-300 mb-10 leading-relaxed max-w-lg"
               >
-                RJ Generators is your trusted dealer for new and used industrial generators. 
-                Sell your old unit at the best market price, or buy quality-checked, certified generators backed by warranty.
+                RJ Generators provides industrial and portable generators on rent for projects, events and backup power. 
+                We also buy, sell and trade new and used generators.
               </motion.p>
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -80,7 +110,7 @@ export default function Home() {
                   Buy Generators
                 </Link>
               </motion.div>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -122,7 +152,7 @@ export default function Home() {
                       Our Services
                     </span>
                   </div>
-                  <h2 className="text-3xl lg:text-5xl font-bold tracking-tight mb-6">A better way to buy and sell generators.</h2>
+                  <h2 className="text-3xl lg:text-5xl font-bold tracking-tight mb-6">Rental, sales and service, all in one place.</h2>
                   <p className="text-lg text-zinc-400 leading-relaxed mb-8">Whether you are upgrading, downsizing, or equipping a facility from scratch, our dealership makes the process transparent, fast, and completely hassle-free.</p>
                   <Link
                     href="/sell"

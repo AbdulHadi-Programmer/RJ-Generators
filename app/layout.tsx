@@ -9,9 +9,9 @@ import FloatingCall from '../components/floating-call'
 const ClickTracker = () => null
 
 export const metadata: Metadata = {
-  title: 'RJ Generators — Generator Sale & Purchase',
+  title: 'RJ Generators — Generator Rental & Hire',
   description:
-    'Buy and sell generators with RJ Generators. We buy all makes and models and sell quality-checked, certified new and used generators backed by warranty.',
+    'Rent industrial and portable generators from RJ Generators. We also buy, sell and trade new and used generators, with repair and maintenance support.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
